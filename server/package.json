@@ -1,0 +1,21 @@
+{
+  "name": "grpc-server",
+  "version": "1.0.0",
+  "description": "gRPC basic server",
+  "main": "index.ts",
+  "scripts": {
+    "proto:gen": "proto-loader-gen-types --grpcLib=@grpc/grpc-js     --outDir=protos/proto/ protos/proto/*.proto",
+    "serve": "ts-node index"
+  },
+  "keywords": [
+    "gRPC"
+  ],
+  "author": "Ro Medina",
+  "license": "ISC",
+  "devDependencies": {
+    "@grpc/grpc-js": "^1.12.2",
+    "@grpc/proto-loader": "^0.7.13",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

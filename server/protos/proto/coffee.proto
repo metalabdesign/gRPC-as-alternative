@@ -1,0 +1,24 @@
+syntax = "proto3";
+package coffee;
+
+service Coffee{
+    // Describe rpc services here **
+    rpc Price(PriceRequest) returns (PriceResponse){}
+    rpc RandomFlavors(FlavorRequest) returns (stream FlavorResponse){};
+}
+
+message PriceRequest{
+    int32 numberOfCoffees = 1;
+}
+
+message PriceResponse{
+    string price = 1;
+}
+
+message FlavorRequest{
+    int32 numberOfOptions = 1;
+}
+
+message FlavorResponse{
+    int32 randomId = 1;
+}
